@@ -1,3 +1,5 @@
+https://web-ge3nqauor-basuakashramanni-8145s-projects.vercel.app/resume
+
 # AI Career Copilot (Hackathon)
 
 Monorepo:
