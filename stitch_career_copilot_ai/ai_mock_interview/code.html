@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mock Interview - Career Copilot</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary-fixed": "#71f8e4",
+                        "surface-container": "#eceef0",
+                        "background": "#f7f9fb",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#bec6e0",
+                        "outline-variant": "#c6c6cd",
+                        "tertiary-fixed": "#d3e4fe",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-fixed": "#dae2fd",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary-container": "#131b2e",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#6df5e1",
+                        "on-surface": "#191c1e",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-container": "#75859d",
+                        "tertiary": "#000000",
+                        "tertiary-container": "#0b1c30",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-primary-container": "#7c839b",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed": "#00201c",
+                        "secondary-fixed-dim": "#4fdbc8",
+                        "on-secondary-container": "#006f64",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-fixed-variant": "#005048",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-tint": "#565e74",
+                        "on-surface-variant": "#45464d",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "outline": "#76777d",
+                        "surface": "#f7f9fb",
+                        "surface-bright": "#f7f9fb",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "secondary": "#006b5f",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "inverse-primary": "#bec6e0",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-xl": "64px",
+                        "stack-lg": "32px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "margin-x-mobile": "20px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "margin-x-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface w-full sticky top-0 z-50 border-b border-outline-variant shadow-sm h-20">
+<div class="flex justify-between items-center w-full px-margin-x-desktop max-w-container-max mx-auto h-full">
+<!-- Brand -->
+<div class="flex items-center">
+<span class="text-headline-sm font-headline-sm font-bold text-on-background">Career Copilot</span>
+</div>
+<!-- Navigation Links (Web) -->
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Resume</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Internships</a>
+<!-- Active Item: Interview -->
+<a class="text-secondary border-b-2 border-secondary pb-1 font-bold text-label-md flex flex-col scale-95 transition-transform duration-150" href="#">Interview</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Voice Coach</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Growth</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-stack-md">
+<a class="text-secondary font-label-md hover:text-secondary transition-colors duration-200" href="#">Sign In</a>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full border border-outline-variant" data-alt="A small, professional headshot of a diverse young adult looking confidently at the camera. The background is a soft, neutral studio setting with bright, even lighting suitable for a modern corporate application. The mood is friendly and approachable, reinforcing a high-end AI career service aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoJNKN0A4jXa_5RbiL3f-AcBCyd1DVUv2nhy3mOakP_P9xbbu-9a01aDnx-FzEDNkFAQ-qBH8BrJ2Z4MzyWESHiCpkSwHYIQfg8M_MI_lxwE3NhwZfDFXgdzz_Eo-O1slhLTmg2D3mmStWl9kt3IKDWQBGfpuEmuPnFwSg-tgjqxxwjVtowU8LHgN-K-t0AuUX9ky2jivZBAr57rXYGosq5hWNv75m4792mdznu-PJTsSPfsFaVkCGLb7gNDVy04D-nadqiwYkyY6x"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-x-desktop py-stack-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Context Picker & Chat -->
+<div class="lg:col-span-8 flex flex-col gap-stack-lg">
+<!-- Context Picker Card -->
+<div class="bg-surface-container-lowest border border-outline-variant shadow-[0_4px_12px_rgba(11,28,48,0.05)] rounded-lg p-[24px]">
+<h2 class="text-headline-sm font-headline-sm mb-stack-md text-on-background">Interview Setup</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Role Selection -->
+<div class="flex flex-col gap-base">
+<label class="text-label-sm font-label-sm text-on-surface-variant">Target Role</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface border border-outline-variant rounded-lg py-3 pl-4 pr-10 text-body-md text-on-background focus:outline-none focus:border-[#006b5f] focus:ring-2 focus:ring-[#006b5f]/10 transition-all cursor-pointer">
+<option>Product Manager</option>
+<option>Software Engineer</option>
+<option>Data Analyst</option>
+<option>UX Designer</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant pointer-events-none" style="font-variation-settings: 'FILL' 0;">expand_more</span>
+</div>
+</div>
+<!-- Interview Type Selection -->
+<div class="flex flex-col gap-base">
+<label class="text-label-sm font-label-sm text-on-surface-variant">Interview Type</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface border border-outline-variant rounded-lg py-3 pl-4 pr-10 text-body-md text-on-background focus:outline-none focus:border-[#006b5f] focus:ring-2 focus:ring-[#006b5f]/10 transition-all cursor-pointer">
+<option>Behavioral (STAR Method)</option>
+<option>Technical / System Design</option>
+<option>Case Study</option>
+<option>Culture Fit</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant pointer-events-none" style="font-variation-settings: 'FILL' 0;">expand_more</span>
+</div>
+</div>
+</div>
+<div class="mt-stack-md flex justify-end">
+<button class="bg-[#006b5f] hover:bg-[#005048] text-on-primary text-label-md font-label-md py-2 px-6 rounded-lg transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Start Session
+                    </button>
+</div>
+</div>
+<!-- Chat Interface -->
+<div class="bg-surface-container-lowest border border-outline-variant shadow-[0_4px_12px_rgba(11,28,48,0.05)] rounded-lg flex flex-col h-[600px]">
+<!-- Chat Header -->
+<div class="border-b border-outline-variant p-[24px] flex justify-between items-center bg-surface-bright rounded-t-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#e6f9f6] flex items-center justify-center text-[#006b5f]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<h3 class="text-body-md font-bold text-on-background">AI Interviewer</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Product Management • Behavioral</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#f0fdfa] text-[#006b5f] text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-[#006b5f] animate-pulse"></span>
+                            Recording
+                        </span>
+<button class="p-2 text-on-surface-variant hover:text-secondary rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Chat Transcript Area -->
+<div class="flex-grow overflow-y-auto p-[24px] flex flex-col gap-stack-md bg-background">
+<!-- AI Message -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-[#e6f9f6] flex-shrink-0 flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-[#006b5f] text-sm" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl rounded-tl-sm p-4 shadow-sm">
+<p class="text-body-md text-on-background">Welcome! Let's start with a common behavioral question. Can you tell me about a time when you had to manage a project with tight deadlines and competing priorities? How did you ensure successful delivery?</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex gap-4 max-w-[85%] self-end flex-row-reverse">
+<img alt="User avatar" class="w-8 h-8 rounded-full flex-shrink-0 mt-1 border border-outline-variant" data-alt="Small thumbnail profile picture of a young professional in a neat setup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPYxMqRipXSWWxdJh3h_RjpDYGdYYwt-HBEn59mor5y8DGY8NHGNOHNyOSg-PpNiKKh7rR4YIZrJD5rpI2nJWjpf33oWIL2g2LN0D7VDWBv7UbBcH79A-BxesDWwe_nOa7mtytLeH23To3hjeyXXpBOvtE97NyC2-D_bAzTZG8gEZYSpJPyIpWdpmNpB_JBtBf02Wjfy-IvjIidraX3wOQ5LW0ggYQAzlWGMKDgUR_3M7ycUo-pIrW31DSQoCR_IlbKqCTPpfBJ6kw"/>
+<div class="bg-[#f0fdfa] border border-[#a7f3d0] rounded-2xl rounded-tr-sm p-4 shadow-sm">
+<p class="text-body-md text-on-background">Sure. In my last role at TechCorp, we were launching a new mobile feature just before the holiday rush. Halfway through, critical bugs were discovered in the backend API, and our lead engineer went on unexpected leave. I had to quickly reprioritize the Jira backlog, organize daily stand-ups to unblock the remaining team, and communicate a slightly revised scope to stakeholders to ensure we hit the launch window without sacrificing quality.</p>
+</div>
+</div>
+<!-- AI Follow-up -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="w-8 h-8 rounded-full bg-[#e6f9f6] flex-shrink-0 flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-[#006b5f] text-sm" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-2xl rounded-tl-sm p-4 shadow-sm">
+<p class="text-body-md text-on-background">That's a strong overview of the Situation and Task. However, I'd like to hear more specifics on the Action. Exactly *how* did you decide which features to cut when communicating the revised scope?</p>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-[24px] border-t border-outline-variant bg-surface-bright rounded-b-lg">
+<div class="flex items-end gap-3">
+<div class="flex-grow relative">
+<textarea class="w-full bg-surface border border-outline-variant rounded-xl py-3 pl-4 pr-12 text-body-md text-on-background focus:outline-none focus:border-[#006b5f] focus:ring-2 focus:ring-[#006b5f]/10 transition-all resize-none" placeholder="Type or speak your response..." rows="3"></textarea>
+<button class="absolute right-3 bottom-3 p-2 text-on-surface-variant hover:text-[#006b5f] rounded-full hover:bg-[#f0fdfa] transition-colors" title="Use Microphone">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mic</span>
+</button>
+</div>
+<button class="bg-[#006b5f] hover:bg-[#005048] text-on-primary p-3 rounded-xl transition-colors flex-shrink-0 shadow-[0_4px_12px_rgba(11,28,48,0.05)]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Evaluation Side Panel -->
+<aside class="lg:col-span-4 flex flex-col gap-stack-lg">
+<!-- Real-time Feedback Card -->
+<div class="bg-surface-container-lowest border border-outline-variant shadow-[0_4px_12px_rgba(11,28,48,0.05)] rounded-lg flex flex-col overflow-hidden relative">
+<!-- AI Accent Line -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-[#006b5f]"></div>
+<div class="p-[24px] pl-[28px] border-b border-outline-variant">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[#006b5f] text-[20px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h2 class="text-body-lg font-bold text-on-background">Live Insight</h2>
+</div>
+<p class="text-body-md text-on-surface-variant">Your last response lacked specific metrics. Try to quantify your impact.</p>
+</div>
+<!-- STAR Structure Scores -->
+<div class="p-[24px] pl-[28px]">
+<h3 class="text-label-md font-label-md text-on-background mb-stack-md uppercase tracking-wider text-on-surface-variant">STAR Method Evaluation</h3>
+<div class="flex flex-col gap-stack-sm">
+<!-- Situation -->
+<div>
+<div class="flex justify-between text-label-sm font-label-sm mb-1">
+<span class="text-on-background">Situation</span>
+<span class="text-[#006b5f] font-bold">Good</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-[#006b5f] h-full w-[80%] rounded-full"></div>
+</div>
+</div>
+<!-- Task -->
+<div>
+<div class="flex justify-between text-label-sm font-label-sm mb-1 mt-2">
+<span class="text-on-background">Task</span>
+<span class="text-[#006b5f] font-bold">Excellent</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-[#006b5f] h-full w-[95%] rounded-full"></div>
+</div>
+</div>
+<!-- Action -->
+<div>
+<div class="flex justify-between text-label-sm font-label-sm mb-1 mt-2">
+<span class="text-on-background">Action</span>
+<span class="text-[#b45309] font-bold">Needs Detail</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-[#fbbf24] h-full w-[40%] rounded-full"></div>
+</div>
+</div>
+<!-- Result -->
+<div>
+<div class="flex justify-between text-label-sm font-label-sm mb-1 mt-2">
+<span class="text-on-background">Result</span>
+<span class="text-on-surface-variant">Pending</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden border border-dashed border-outline-variant">
+<div class="bg-surface-container h-full w-[0%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Strengths & Areas for Improvement -->
+<div class="bg-surface-container-lowest border border-outline-variant shadow-[0_4px_12px_rgba(11,28,48,0.05)] rounded-lg p-[24px]">
+<h3 class="text-body-lg font-bold text-on-background mb-stack-md">Session Summary</h3>
+<div class="flex flex-col gap-stack-md">
+<!-- Strengths -->
+<div>
+<h4 class="text-label-md font-label-md text-on-surface-variant flex items-center gap-1.5 mb-2">
+<span class="material-symbols-outlined text-[#006b5f] text-[16px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Key Strengths
+                        </h4>
+<ul class="flex flex-wrap gap-2">
+<li class="inline-flex px-3 py-1 bg-[#f0fdfa] text-[#006b5f] border border-[#a7f3d0] rounded-full text-label-sm font-label-sm">Clear structure</li>
+<li class="inline-flex px-3 py-1 bg-[#f0fdfa] text-[#006b5f] border border-[#a7f3d0] rounded-full text-label-sm font-label-sm">Good pacing</li>
+</ul>
+</div>
+<div class="h-px bg-outline-variant w-full"></div>
+<!-- Improvements -->
+<div>
+<h4 class="text-label-md font-label-md text-on-surface-variant flex items-center gap-1.5 mb-2">
+<span class="material-symbols-outlined text-[#b45309] text-[16px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+                            Focus Areas
+                        </h4>
+<ul class="flex flex-col gap-2">
+<li class="text-label-sm text-on-background flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#fbbf24] mt-1.5 flex-shrink-0"></span>
+                                Avoid generic phrases like "we collaborated well".
+                            </li>
+<li class="text-label-sm text-on-background flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#fbbf24] mt-1.5 flex-shrink-0"></span>
+                                Transition smoothly from 'Action' to measurable 'Results'.
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline mt-auto w-full">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-x-desktop py-stack-lg max-w-container-max mx-auto gap-stack-md">
+<!-- Brand & Copyright -->
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="text-label-md font-label-md font-bold text-on-surface dark:text-on-surface">Career Copilot</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">© 2024 Career Copilot. Built for the next generation of talent.</span>
+</div>
+<!-- Footer Links -->
+<nav class="flex gap-gutter text-label-sm font-label-sm">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Help Center</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>

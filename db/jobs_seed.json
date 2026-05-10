@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Software Engineering Intern",
+    "company": "Acme Labs",
+    "location": "Remote",
+    "required_skills": ["javascript", "react", "git", "apis"],
+    "description": "Work on frontend features, integrate APIs, and ship UI improvements."
+  },
+  {
+    "title": "Backend Intern (Python)",
+    "company": "ByteWorks",
+    "location": "Bengaluru",
+    "required_skills": ["python", "fastapi", "sql", "docker"],
+    "description": "Build REST endpoints, write SQL queries, and assist with deployments."
+  },
+  {
+    "title": "Data Analyst Intern",
+    "company": "Insightful",
+    "location": "Hybrid",
+    "required_skills": ["sql", "excel", "python", "statistics"],
+    "description": "Analyze datasets, build dashboards, and report weekly insights."
+  },
+  {
+    "title": "Product Management Intern",
+    "company": "ShipIt",
+    "location": "Mumbai",
+    "required_skills": ["communication", "user_research", "metrics", "docs"],
+    "description": "Write PRDs, run user interviews, and track feature metrics."
+  }
+]

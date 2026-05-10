@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Growth Tracker | Career Copilot</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary-fixed": "#71f8e4",
+                        "surface-container": "#eceef0",
+                        "background": "#f7f9fb",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#bec6e0",
+                        "outline-variant": "#c6c6cd",
+                        "tertiary-fixed": "#d3e4fe",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-fixed": "#dae2fd",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary-container": "#131b2e",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#6df5e1",
+                        "on-surface": "#191c1e",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-container": "#75859d",
+                        "tertiary": "#000000",
+                        "tertiary-container": "#0b1c30",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-primary-container": "#7c839b",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed": "#00201c",
+                        "secondary-fixed-dim": "#4fdbc8",
+                        "on-secondary-container": "#006f64",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-fixed-variant": "#005048",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-tint": "#565e74",
+                        "on-surface-variant": "#45464d",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "outline": "#76777d",
+                        "surface": "#f7f9fb",
+                        "surface-bright": "#f7f9fb",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "secondary": "#006b5f",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "inverse-primary": "#bec6e0",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-xl": "64px",
+                        "stack-lg": "32px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "margin-x-mobile": "20px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "margin-x-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .shadow-level-1 { box-shadow: 0 0 0 1px #E2E8F0; }
+        .shadow-level-2 { box-shadow: 0 4px 12px rgba(11, 28, 48, 0.05); }
+        .shadow-level-3:hover { box-shadow: 0 8px 20px rgba(11, 28, 48, 0.08); }
+        .ai-border-accent { border-left: 4px solid #006b5f; }
+        .bg-teal-light { background-color: #F0FDFA; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-outline-variant shadow-sm w-full sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-x-mobile md:px-margin-x-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-6">
+<a class="text-headline-sm font-headline-sm font-bold text-on-background tracking-tight" href="#">
+                    Career Copilot
+                </a>
+</div>
+<nav class="hidden md:flex items-center gap-8 h-full">
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200 flex items-center h-full pt-1" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200 flex items-center h-full pt-1" href="#">Resume</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200 flex items-center h-full pt-1" href="#">Internships</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200 flex items-center h-full pt-1" href="#">Interview</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200 flex items-center h-full pt-1" href="#">Voice Coach</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 font-bold flex items-center h-full pt-1 scale-95 transition-transform duration-150" href="#">Growth</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:block px-4 py-2 border border-outline rounded-lg text-label-md font-label-md text-primary hover:bg-surface-container-low transition-colors shadow-level-1">
+                    Sign In
+                </button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant hidden md:block">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a young woman with a neutral, confident expression. The background is a soft, modern light grey. The lighting is clean and high-key, suitable for a corporate or premium startup profile picture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_LC3gqk2PTh7K8eNMqvnPBGtmKx0qq23l3VtserdbX_M86u-4AWvgJXnIHRuFglgkt70n1aTNxFFfHngn-fvW1v_go5VLUOBY8e8pf4vRxdYVdfBAFsACZ-F29gQVXqm9F23AAKVBohgdtc7ks0tl5queCHwJOvDNVQvWXO-o9lWpXYGV_IraZx2UxNNkB5jIyNPXBt9nPl7Uwj3u-04bn5wHr2y31Xhxr1MivV-UDNRDbuAm2aGarFrxZOThBmLtXQgm5F1-qIPy"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full px-margin-x-mobile md:px-margin-x-desktop max-w-container-max mx-auto py-stack-lg flex flex-col gap-stack-lg">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-stack-md">
+<div>
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-primary tracking-tight">Growth Tracker</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-2 max-w-2xl">Log your weekly progress, build momentum, and see how your career readiness evolves.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant shadow-level-2 flex items-center gap-4 min-w-[240px]">
+<div class="w-12 h-12 rounded-full border-4 border-secondary flex items-center justify-center relative">
+<span class="text-label-sm font-label-sm text-secondary absolute">72</span>
+</div>
+<div>
+<h3 class="text-label-md font-label-md text-on-surface font-bold">Career Readiness</h3>
+<p class="text-label-sm font-label-sm text-secondary font-medium mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +3 this week
+                    </p>
+</div>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Weekly Check-in Form (Spans 7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-gutter">
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-level-2 p-6 md:p-8 flex flex-col gap-stack-md">
+<div class="flex justify-between items-center border-b border-outline-variant pb-4">
+<h2 class="text-headline-sm font-headline-sm text-primary">Weekly Check-in</h2>
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-container py-1 px-3 rounded-full">Week of Oct 24</span>
+</div>
+<form class="flex flex-col gap-stack-lg mt-2">
+<!-- Skills Section -->
+<div class="flex flex-col gap-stack-sm">
+<label class="text-label-md font-label-md text-on-surface font-semibold">New Skills Practiced</label>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm mb-2">What technical or soft skills did you focus on?</p>
+<div class="flex flex-wrap gap-2 mb-3">
+<span class="bg-surface-container-high text-on-surface px-3 py-1.5 rounded-full text-label-sm font-label-sm flex items-center gap-1 shadow-level-1">
+                                    React.js <button class="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-error" type="button">close</button>
+</span>
+<span class="bg-surface-container-high text-on-surface px-3 py-1.5 rounded-full text-label-sm font-label-sm flex items-center gap-1 shadow-level-1">
+                                    Public Speaking <button class="material-symbols-outlined text-[14px] text-on-surface-variant hover:text-error" type="button">close</button>
+</span>
+</div>
+<div class="relative">
+<input class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-body-md font-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all shadow-level-1" placeholder="e.g. Python, Agile, Negotiation..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-secondary bg-teal-light rounded-full p-1 hover:bg-secondary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Projects Section -->
+<div class="flex flex-col gap-stack-sm">
+<label class="text-label-md font-label-md text-on-surface font-semibold">Project Milestones</label>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm mb-2">Any significant progress on personal or academic projects?</p>
+<textarea class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-body-md font-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all shadow-level-1 resize-none" placeholder="I finally deployed the database for my portfolio app..." rows="3"></textarea>
+</div>
+<!-- Challenges -->
+<div class="flex flex-col gap-stack-sm">
+<label class="text-label-md font-label-md text-on-surface font-semibold">Blockers &amp; Challenges</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">warning</span>
+<input class="w-full bg-surface border border-outline-variant rounded-xl pl-12 pr-4 py-3 text-body-md font-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/10 transition-all shadow-level-1" placeholder="Struggling with CSS Grid layouts..." type="text"/>
+</div>
+</div>
+<!-- Submit -->
+<div class="pt-4 border-t border-outline-variant flex justify-end">
+<button class="bg-secondary text-on-primary px-6 py-3 rounded-xl text-label-md font-label-md font-semibold hover:bg-[#0D9488] transition-colors shadow-level-2 shadow-level-3 flex items-center gap-2" type="submit">
+                                Log Weekly Progress <span class="material-symbols-outlined text-[18px]">check_circle</span>
+</button>
+</div>
+</form>
+</section>
+<!-- AI Insight Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-level-2 p-6 ai-border-accent flex gap-4 items-start shadow-level-3 transition-shadow">
+<div class="bg-teal-light p-2 rounded-lg text-secondary mt-1">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-primary font-bold mb-1">Copilot Insight</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Based on your recent logs, you've consistently practiced React for 3 weeks. Consider adding a small portfolio project to your Resume section to solidify this skill.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Visualization & Streaks (Spans 5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<!-- Streak Card -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-level-2 p-6 flex flex-col items-center justify-center text-center gap-stack-sm">
+<div class="w-20 h-20 bg-teal-light rounded-full flex items-center justify-center mb-2 shadow-level-1">
+<span class="material-symbols-outlined text-secondary text-[40px]">local_fire_department</span>
+</div>
+<h3 class="text-display-lg-mobile font-display-lg-mobile text-primary">4 Weeks</h3>
+<p class="text-label-md font-label-md text-on-surface-variant font-medium">Current Logging Streak</p>
+<div class="flex gap-2 mt-4 w-full justify-between px-4">
+<div class="flex flex-col items-center gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">W1</span>
+<div class="w-8 h-8 rounded-full bg-secondary text-on-primary flex items-center justify-center text-sm"><span class="material-symbols-outlined text-[16px]">check</span></div>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">W2</span>
+<div class="w-8 h-8 rounded-full bg-secondary text-on-primary flex items-center justify-center text-sm"><span class="material-symbols-outlined text-[16px]">check</span></div>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">W3</span>
+<div class="w-8 h-8 rounded-full bg-secondary text-on-primary flex items-center justify-center text-sm"><span class="material-symbols-outlined text-[16px]">check</span></div>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">W4</span>
+<div class="w-8 h-8 rounded-full bg-secondary text-on-primary flex items-center justify-center text-sm"><span class="material-symbols-outlined text-[16px]">check</span></div>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">W5</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center text-sm shadow-level-1"></div>
+</div>
+</div>
+</section>
+<!-- Timeline / History -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-level-2 p-6 flex-grow flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-headline-sm font-headline-sm text-primary">Recent Growth</h3>
+<button class="text-label-sm font-label-sm text-secondary hover:underline font-semibold">View All</button>
+</div>
+<div class="relative pl-4 border-l-2 border-surface-container-high flex flex-col gap-stack-lg flex-grow">
+<!-- Timeline Item 1 -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1 w-3 h-3 bg-secondary rounded-full border-2 border-surface-container-lowest"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block mb-1">Oct 17, 2024</span>
+<h4 class="text-label-md font-label-md text-on-surface font-bold">Completed UX Certificate</h4>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm mt-1">Finished the final module on wireframing.</p>
+<div class="flex gap-2 mt-2">
+<span class="bg-surface-container px-2 py-0.5 rounded text-label-sm font-label-sm text-on-surface-variant">Figma</span>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1 w-3 h-3 bg-surface-container-high rounded-full border-2 border-surface-container-lowest"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block mb-1">Oct 10, 2024</span>
+<h4 class="text-label-md font-label-md text-on-surface font-bold">Mock Interview Practice</h4>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm mt-1">Scored 85% on behavioral questions with Voice Coach.</p>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1 w-3 h-3 bg-surface-container-high rounded-full border-2 border-surface-container-lowest"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block mb-1">Oct 03, 2024</span>
+<h4 class="text-label-md font-label-md text-on-surface font-bold">Started Database Project</h4>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm mt-1">Designed initial schema for inventory tracker.</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-x-mobile md:px-margin-x-desktop py-stack-lg max-w-container-max mx-auto gap-stack-md">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-label-md font-label-md font-bold text-on-surface">Career Copilot</span>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">© 2024 Career Copilot. Built for the next generation of talent.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Help Center</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>

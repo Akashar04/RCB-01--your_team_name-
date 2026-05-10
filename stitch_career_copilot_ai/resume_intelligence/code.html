@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resume Analysis - Career Copilot</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1e",
+                    "on-primary-fixed": "#131b2e",
+                    "secondary-fixed": "#71f8e4",
+                    "surface-container": "#eceef0",
+                    "background": "#f7f9fb",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#bec6e0",
+                    "outline-variant": "#c6c6cd",
+                    "tertiary-fixed": "#d3e4fe",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-fixed": "#dae2fd",
+                    "inverse-on-surface": "#eff1f3",
+                    "primary-container": "#131b2e",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#6df5e1",
+                    "on-surface": "#191c1e",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-container": "#75859d",
+                    "tertiary": "#000000",
+                    "tertiary-container": "#0b1c30",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "on-primary-container": "#7c839b",
+                    "inverse-surface": "#2d3133",
+                    "on-secondary-fixed": "#00201c",
+                    "secondary-fixed-dim": "#4fdbc8",
+                    "on-secondary-container": "#006f64",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary-fixed-variant": "#005048",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-tint": "#565e74",
+                    "on-surface-variant": "#45464d",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "outline": "#76777d",
+                    "surface": "#f7f9fb",
+                    "surface-bright": "#f7f9fb",
+                    "primary": "#000000",
+                    "on-error-container": "#93000a",
+                    "secondary": "#006b5f",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "inverse-primary": "#bec6e0",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-xl": "64px",
+                    "stack-lg": "32px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "margin-x-mobile": "20px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "margin-x-desktop": "40px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .shadow-level-2 { box-shadow: 0 4px 12px rgba(11, 28, 48, 0.05); }
+        .shadow-level-3:hover { box-shadow: 0 8px 20px rgba(11, 28, 48, 0.08); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-surface border-b border-outline-variant shadow-sm w-full sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-x-desktop max-w-container-max mx-auto h-20">
+<div class="text-headline-sm font-headline-sm font-bold text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+                Career Copilot
+            </div>
+<div class="hidden md:flex gap-8 items-center h-full">
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Dashboard</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 font-bold h-full flex items-center" href="#">Resume</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Internships</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Interview</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Voice Coach</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Growth</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200 hidden md:block">Sign In</button>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full border border-outline-variant object-cover" data-alt="A professional headshot of a young adult looking confident, isolated on a bright, pure white background. The lighting is high-key and soft, creating a modern, premium corporate aesthetic suitable for a high-end tech platform. The colors are crisp, with a focus on deep blacks and pristine whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiAEQKHg5ifkaeKafk-DBH4F5v1fXG2KLfv6Q35E5t5-S_tBb_vjCxY0hcGyQ0CvpOOCgl0zHjS2l9OM5pl7aa_k3SVB9rypl2zn6LFUxH3Lufv4qIR_oGo6nmBz45XTkjR_A90AEfn7R43fq43CEuLzgZzBcsg5dvRvxDRagUVfTSnoTe6wKM-G5KGRXqXRJulH8Lqp6shSKYgCDtVisFK0kW9w__n8ijkbWjPyL4kmbT5fXndJcXy8IQmSIlAB7vUMwgoWm21fXa"/>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full px-margin-x-mobile md:px-margin-x-desktop max-w-container-max mx-auto py-stack-xl flex flex-col gap-stack-lg">
+<!-- Header & Processing Status -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-end gap-stack-md">
+<div>
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-background">Resume Analysis</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-stack-sm max-w-2xl">We've processed your latest document against top industry ATS algorithms to uncover gaps and highlight your strongest skills.</p>
+</div>
+<!-- Simulated Processing Steps (Completed State) -->
+<div class="flex items-center gap-stack-md bg-surface-container-lowest border border-surface-dim rounded-full px-4 py-2 shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-label-sm font-label-sm text-on-surface">Parsed</span>
+</div>
+<div class="w-4 h-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-label-sm font-label-sm text-on-surface">Extracted</span>
+</div>
+<div class="w-4 h-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="text-label-sm font-label-sm text-on-surface">Generated</span>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Upload & Score (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- ATS Score Card -->
+<div class="bg-surface-container-lowest border border-surface-dim rounded-xl p-gutter shadow-level-2 flex flex-col items-center justify-center text-center">
+<h2 class="text-headline-sm font-headline-sm text-on-background w-full text-left mb-stack-md">ATS Fit Score</h2>
+<!-- Circular Gauge -->
+<div class="relative w-48 h-48 mb-stack-sm flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<!-- Background Track -->
+<path class="text-surface-container-high stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3"></path>
+<!-- Progress Value (78%) -->
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="78, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-display-lg font-display-lg text-primary tracking-tight">78</span>
+<span class="text-label-md font-label-md text-on-surface-variant uppercase tracking-widest">/ 100</span>
+</div>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">Your resume is strong, but formatting issues may block automated parsers.</p>
+</div>
+<!-- Upload Zone -->
+<div class="bg-surface-container-lowest border-2 border-dashed border-outline-variant hover:border-secondary transition-colors duration-200 rounded-xl p-gutter flex flex-col items-center justify-center text-center cursor-pointer shadow-sm group">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mb-stack-md group-hover:bg-tertiary-fixed transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">upload_file</span>
+</div>
+<h3 class="text-label-md font-label-md text-on-background mb-1">Analyze Another File</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-stack-md">Drag and drop a PDF, or click to browse.</p>
+<button class="bg-surface text-on-surface border border-outline px-4 py-2 rounded-lg text-label-md font-label-md hover:bg-surface-container transition-colors">
+                        Browse Files
+                    </button>
+</div>
+</div>
+<!-- Right Column: Fixes & Skills (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- AI Insight: Top Fixes Checklist -->
+<div class="bg-surface-container-lowest border border-surface-dim border-l-4 border-l-secondary rounded-xl p-gutter shadow-level-2">
+<div class="flex items-center gap-2 mb-stack-lg">
+<span class="material-symbols-outlined text-secondary">auto_fix_high</span>
+<h2 class="text-headline-sm font-headline-sm text-on-background">AI Recommended Fixes</h2>
+</div>
+<div class="flex flex-col gap-stack-md">
+<!-- Fix Item 1 -->
+<div class="border border-surface-dim rounded-lg p-stack-md bg-surface shadow-sm shadow-level-3 transition-shadow duration-200 group cursor-pointer">
+<div class="flex justify-between items-start">
+<div class="flex gap-stack-sm items-start">
+<span class="material-symbols-outlined text-error mt-0.5">error</span>
+<div>
+<h3 class="text-label-md font-label-md text-on-background">Quantify Achievements</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1 max-w-xl">You have listed responsibilities but missed opportunities to measure impact. Add metrics (%, $, time saved) to the "Software Engineer Intern" role.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<!-- Fix Item 2 -->
+<div class="border border-surface-dim rounded-lg p-stack-md bg-surface shadow-sm shadow-level-3 transition-shadow duration-200 group cursor-pointer">
+<div class="flex justify-between items-start">
+<div class="flex gap-stack-sm items-start">
+<span class="material-symbols-outlined text-on-surface mt-0.5">warning</span>
+<div>
+<h3 class="text-label-md font-label-md text-on-background">Action Verbs Missing</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1 max-w-xl">Replace passive phrases like "Responsible for developing" with strong action verbs such as "Engineered", "Architected", or "Spearheaded".</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<!-- Fix Item 3 -->
+<div class="border border-surface-dim rounded-lg p-stack-md bg-surface shadow-sm shadow-level-3 transition-shadow duration-200 group cursor-pointer">
+<div class="flex justify-between items-start">
+<div class="flex gap-stack-sm items-start">
+<span class="material-symbols-outlined text-on-surface mt-0.5">info</span>
+<div>
+<h3 class="text-label-md font-label-md text-on-background">Inconsistent Date Formatting</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1 max-w-xl">ATS systems prefer standard date formats (e.g., MM/YYYY or Month YYYY). Ensure consistency across all employment entries.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Skills Extracted -->
+<div class="bg-surface-container-lowest border border-surface-dim rounded-xl p-gutter shadow-level-2">
+<h2 class="text-headline-sm font-headline-sm text-on-background mb-stack-md">Extracted Competencies</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-stack-lg">These are the hard skills standard ATS algorithms successfully identified from your text.</p>
+<div class="flex flex-wrap gap-2">
+<!-- Primary Skills (Found matching job targets) -->
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1.5 rounded-full text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Python
+                        </span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1.5 rounded-full text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> React.js
+                        </span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1.5 rounded-full text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Machine Learning
+                        </span>
+<!-- Secondary/Neutral Skills -->
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1.5 rounded-full text-label-sm font-label-sm">Agile Methodology</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1.5 rounded-full text-label-sm font-label-sm">Git</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1.5 rounded-full text-label-sm font-label-sm">SQL</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1.5 rounded-full text-label-sm font-label-sm">Data Analysis</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1.5 rounded-full text-label-sm font-label-sm">Docker</span>
+<span class="bg-surface-variant text-on-surface-variant px-3 py-1.5 rounded-full text-label-sm font-label-sm">REST APIs</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-x-desktop py-stack-lg max-w-container-max mx-auto gap-stack-md">
+<div class="text-label-md font-label-md font-bold text-on-surface">Career Copilot</div>
+<div class="text-body-md font-body-md text-on-surface-variant text-center md:text-left">
+                © 2024 Career Copilot. Built for the next generation of talent.
+            </div>
+<div class="flex gap-4">
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Help Center</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Internship Matches - Career Copilot</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1e",
+                        "on-primary-fixed": "#131b2e",
+                        "secondary-fixed": "#71f8e4",
+                        "surface-container": "#eceef0",
+                        "background": "#f7f9fb",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#bec6e0",
+                        "outline-variant": "#c6c6cd",
+                        "tertiary-fixed": "#d3e4fe",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-fixed": "#dae2fd",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary-container": "#131b2e",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#6df5e1",
+                        "on-surface": "#191c1e",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-container": "#75859d",
+                        "tertiary": "#000000",
+                        "tertiary-container": "#0b1c30",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-primary-container": "#7c839b",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed": "#00201c",
+                        "secondary-fixed-dim": "#4fdbc8",
+                        "on-secondary-container": "#006f64",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-fixed-variant": "#005048",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-tint": "#565e74",
+                        "on-surface-variant": "#45464d",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "outline": "#76777d",
+                        "surface": "#f7f9fb",
+                        "surface-bright": "#f7f9fb",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "secondary": "#006b5f",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "inverse-primary": "#bec6e0",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-xl": "64px",
+                        "stack-lg": "32px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "stack-md": "16px",
+                        "margin-x-mobile": "20px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "margin-x-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Subtly lifted ambient shadow */
+        .shadow-ambient-2 {
+            box-shadow: 0 4px 12px rgba(11, 28, 48, 0.05);
+        }
+        .shadow-ambient-3 {
+            box-shadow: 0 8px 20px rgba(11, 28, 48, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant shadow-sm w-full">
+<div class="flex justify-between items-center w-full px-margin-x-mobile md:px-margin-x-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-stack-lg">
+<a class="text-headline-sm font-headline-sm font-bold text-on-background flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-secondary icon-fill" data-icon="flight_takeoff">flight_takeoff</span>
+                    Career Copilot
+                </a>
+<nav class="hidden md:flex items-center gap-gutter h-full pt-2">
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Resume</a>
+<!-- Active State Applied Here -->
+<a class="text-secondary border-b-2 border-secondary pb-1 font-bold text-label-md font-label-md" href="#">Internships</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Interview</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Voice Coach</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200" href="#">Growth</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="hidden md:flex text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-200">Sign In</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="person">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-x-mobile md:px-margin-x-desktop py-stack-xl flex flex-col gap-stack-lg">
+<!-- Header Actions -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-stack-md">
+<div>
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-background tracking-tight">Curated Internships</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-2 max-w-2xl">Based on your recent resume updates and targeted skills in Data Science and Machine Learning.</p>
+</div>
+<div class="flex items-center gap-stack-sm w-full md:w-auto">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-outline text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                    Seed jobs
+                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-on-secondary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+                    Refresh matches
+                </button>
+</div>
+</div>
+<!-- Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mt-stack-md">
+<!-- Context Sidebar -->
+<aside class="hidden lg:block lg:col-span-4 space-y-stack-md">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-gutter shadow-ambient-2 sticky top-28">
+<h3 class="text-headline-sm font-headline-sm text-on-background border-b border-outline-variant pb-stack-sm mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="tune">tune</span>
+                        Match Criteria
+                    </h3>
+<div class="space-y-stack-md">
+<div>
+<span class="block text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Target Role</span>
+<span class="inline-block bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-label-sm font-label-sm">Data Scientist</span>
+<span class="inline-block bg-surface-variant text-on-surface-variant px-3 py-1 rounded-full text-label-sm font-label-sm">ML Engineer</span>
+</div>
+<div>
+<span class="block text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Core Skills Indexed</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm border border-secondary/20">Python</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm border border-secondary/20">PyTorch</span>
+<span class="bg-surface-container-high text-on-surface px-3 py-1 rounded-full text-label-sm font-label-sm">SQL</span>
+<span class="bg-surface-container-high text-on-surface px-3 py-1 rounded-full text-label-sm font-label-sm">AWS</span>
+</div>
+</div>
+<div class="pt-stack-sm mt-stack-md border-t border-outline-variant">
+<p class="text-label-sm font-label-sm text-on-surface-variant flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="info">info</span>
+                                Matches are recalibrated daily based on aggregate market trends and your profile strength.
+                            </p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Results List -->
+<div class="lg:col-span-8 flex flex-col gap-stack-md">
+<!-- Match Item 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-gutter shadow-ambient-2 hover:shadow-ambient-3 transition-shadow duration-300">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-stack-md">
+<!-- Match Score Ring -->
+<div class="relative w-14 h-14 flex items-center justify-center rounded-full bg-surface-container border-2 border-secondary shrink-0">
+<span class="text-label-md font-label-md font-bold text-secondary">98%</span>
+</div>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-background">Machine Learning Engineering Intern</h2>
+<p class="text-body-md font-body-md text-on-surface-variant flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="domain">domain</span>
+                                    Anthropic · San Francisco, CA (Hybrid)
+                                </p>
+</div>
+</div>
+<button aria-label="Save job" class="text-outline hover:text-secondary transition-colors">
+<span class="material-symbols-outlined icon-fill text-secondary" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<div class="mt-stack-md flex flex-wrap gap-2">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-label-sm font-label-sm border border-secondary/20">Transformers</span>
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-label-sm font-label-sm border border-secondary/20">PyTorch</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-label-sm font-label-sm">C++</span>
+</div>
+<!-- AI Reasoning Component -->
+<div class="mt-stack-lg border-l-4 border-secondary bg-surface-container-low p-stack-md rounded-r-lg">
+<div class="flex justify-between items-center cursor-pointer group">
+<h4 class="text-label-md font-label-md font-semibold text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="auto_awesome">auto_awesome</span>
+                                Why this fits
+                            </h4>
+<span class="material-symbols-outlined text-outline group-hover:text-on-background transition-colors" data-icon="expand_less">expand_less</span>
+</div>
+<p class="mt-stack-sm text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                            Your recent project on optimizing small language models aligns perfectly with Anthropic's focus on model efficiency. The required PyTorch expertise is a direct match with your heavily weighted skills, and your background in theoretical physics provides the rigorous analytical foundation they typically seek in early-career researchers.
+                        </p>
+</div>
+</article>
+<!-- Match Item 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-gutter shadow-ambient-2 hover:shadow-ambient-3 transition-shadow duration-300">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-stack-md">
+<!-- Match Score Ring -->
+<div class="relative w-14 h-14 flex items-center justify-center rounded-full bg-surface-container border-2 border-secondary/70 shrink-0">
+<span class="text-label-md font-label-md font-bold text-secondary">92%</span>
+</div>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-background">Data Science Intern, Inference</h2>
+<p class="text-body-md font-body-md text-on-surface-variant flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="domain">domain</span>
+                                    Scale AI · Remote
+                                </p>
+</div>
+</div>
+<button aria-label="Save job" class="text-outline hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+<div class="mt-stack-md flex flex-wrap gap-2">
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-label-sm font-label-sm border border-secondary/20">Python</span>
+<span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-label-sm font-label-sm border border-secondary/20">SQL</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-label-sm font-label-sm">Data Pipelines</span>
+</div>
+<!-- AI Reasoning Component (Collapsed state visually represented by just the header) -->
+<div class="mt-stack-lg border-l-4 border-secondary bg-surface-container-low p-stack-md rounded-r-lg">
+<div class="flex justify-between items-center cursor-pointer group">
+<h4 class="text-label-md font-label-md font-semibold text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="auto_awesome">auto_awesome</span>
+                                Why this fits
+                            </h4>
+<span class="material-symbols-outlined text-outline group-hover:text-on-background transition-colors" data-icon="expand_more">expand_more</span>
+</div>
+<!-- Content hidden conceptually, shown for layout completeness in static view -->
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-x-mobile md:px-margin-x-desktop py-stack-lg max-w-container-max mx-auto gap-stack-md">
+<div class="text-label-md font-label-md font-bold text-on-surface">
+                © 2024 Career Copilot. Built for the next generation of talent.
+            </div>
+<nav class="flex flex-wrap justify-center gap-gutter">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors" href="#">Help Center</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary transition-colors" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>
