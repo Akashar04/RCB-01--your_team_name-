@@ -18,15 +18,29 @@ def _normalize_db_url(url: str) -> str:
 DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg://postgres:postgres@localhost:5432/career_copilot")
 
 
-def _supabase_ssl_connect_args(url: str) -> dict | None:
+def _postgres_ssl_connect_args(url: str) -> dict | None:
+    """Use TLS for hosted Postgres (Supabase, Render, Neon, etc.)."""
+    if os.getenv("DATABASE_SSL_DISABLE") == "1":
+        return None
     u = url.lower()
-    if "supabase.co" in u or "pooler.supabase.com" in u:
+    if "localhost" in u or "127.0.0.1" in u:
+        return None
+    if any(
+        marker in u
+        for marker in (
+            "supabase.co",
+            "pooler.supabase.com",
+            ".render.com",
+            "neon.tech",
+            "ondigitalocean.com",
+        )
+    ):
         return {"sslmode": "require"}
     return None
 
 
 _engine_kwargs: dict = {"pool_pre_ping": True, "future": True}
-_ssl = _supabase_ssl_connect_args(DATABASE_URL)
+_ssl = _postgres_ssl_connect_args(DATABASE_URL)
 if _ssl:
     _engine_kwargs["connect_args"] = _ssl
 
